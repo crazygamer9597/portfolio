@@ -1,12 +1,12 @@
 export const personalInfo = {
   name: "Nihal Johann Thomas",
-  title: "FOSS Advocate & CS Enthusiast",
+  title: "Open-source Advocate & CS Enthusiast",
   email: "nihaljohannthomas2003@gmail.com",
   phone: "+91 9840813965",
   linkedin: "linkedin.com/in/nihal-johann-thomas",
   website: "nihaljt.site",
   description: [
-    "💻 Passionate FOSS advocate & CS enthusiast with a solid foundation in AI, cybersecurity, and system design",
+    "💻 Passionate Open-source advocate & CS enthusiast with a solid foundation in AI, cybersecurity, and system design",
     "🔐 Skilled in ML, system security, networking, and cloud, focused on solving real-world problems",
     "🧠 Builder of intelligent systems and full-stack applications that are practical and impactful",
     "🌍 Driven to create open, secure, and accessible tech that respects privacy and promotes innovation"
@@ -18,13 +18,13 @@ export const education = {
     name: "Vellore Institute of Technology",
     location: "Vellore, India",
     degree: "M.Tech Integrated Computer Science Engineering",
-    period: "July 2021 – Present",
-    gpa: "7.79"
+    period: "July 2021 - Present",
+    // gpa: "7.79"
   },
   school: {
     name: "St. Britto's Academy",
     location: "Chennai, India",
-    details: "CBSE – Class X: 83.4%, Class XII: 78.2%",
+    // details: "CBSE – Class X: 83.4%, Class XII: 78.2%",
     year: "2021"
   }
 };

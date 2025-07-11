@@ -1,8 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { GraduationCap, MapPin, Calendar, Award, ExternalLink } from 'lucide-react';
-import { education, certifications as defaultCertifications } from '../data/portfolio';
-import { logger } from '../utils/logger';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  GraduationCap,
+  MapPin,
+  Calendar,
+  Award,
+  ExternalLink,
+} from "lucide-react";
+import {
+  education,
+  certifications as defaultCertifications,
+} from "../data/portfolio";
+import { logger } from "../utils/logger";
 
 interface Certification {
   id?: string;
@@ -14,23 +23,28 @@ interface Certification {
 }
 
 export const Education: React.FC = () => {
-  const [allCertifications, setAllCertifications] = useState<Certification[]>(defaultCertifications);
+  const [allCertifications, setAllCertifications] = useState<Certification[]>(
+    defaultCertifications
+  );
 
   useEffect(() => {
     // Load custom certifications from localStorage and merge with default certifications
     try {
-      const customCertifications = localStorage.getItem('admin_certifications');
+      const customCertifications = localStorage.getItem("admin_certifications");
       if (customCertifications) {
         const parsed = JSON.parse(customCertifications);
         setAllCertifications([...defaultCertifications, ...parsed]);
       }
     } catch (error) {
-      logger.error('Error loading custom certifications', { error });
+      logger.error("Error loading custom certifications", { error });
     }
   }, []);
 
   return (
-    <section id="education" className="py-20 bg-gradient-to-br from-dark-800 to-dark-900">
+    <section
+      id="education"
+      className="py-20 bg-gradient-to-br from-dark-800 to-dark-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -65,7 +79,7 @@ export const Education: React.FC = () => {
               <GraduationCap className="h-8 w-8 text-primary-400 mr-3" />
               Education
             </h3>
-            
+
             <div className="space-y-6">
               <motion.div
                 whileHover={{ scale: 1.02, y: -5 }}
@@ -93,7 +107,7 @@ export const Education: React.FC = () => {
                       </div>
                     </div>
                     <p className="text-gray-200 font-medium">
-                      GPA: <span className="text-primary-300">{education.university.gpa}</span>
+                      {/* GPA: <span className="text-primary-300">{education.university.gpa}</span> */}
                     </p>
                   </div>
                 </div>
@@ -124,9 +138,7 @@ export const Education: React.FC = () => {
                         {education.school.year}
                       </div>
                     </div>
-                    <p className="text-gray-200">
-                      {education.school.details}
-                    </p>
+                    <p className="text-gray-200">{education.school.details}</p>
                   </div>
                 </div>
               </motion.div>
@@ -144,7 +156,7 @@ export const Education: React.FC = () => {
               <Award className="h-8 w-8 text-primary-400 mr-3" />
               Certifications
             </h3>
-            
+
             <div className="space-y-4">
               {allCertifications.map((cert, index) => (
                 <motion.div
