@@ -20,7 +20,8 @@ export const Hero: React.FC = () => {
     try {
       logger.info("Resume view initiated");
       window.open(
-        "https://drive.google.com/file/d/1KK6MZNntzPbGbMrHqj9TWK92-DaD61Nw/view",
+        "https://drive.google.com/file/d/1zdcIPUtk5ePqaTK86SFmliThpigJsmHq/view",
+        // "https://drive.google.com/file/d/1KK6MZNntzPbGbMrHqj9TWK92-DaD61Nw/view",
         "_blank"
       );
     } catch (error) {
@@ -33,7 +34,7 @@ export const Hero: React.FC = () => {
       logger.info("Resume download initiated");
       // Convert Google Drive view link to download link
       const downloadLink =
-        "https://drive.google.com/uc?export=download&id=1KK6MZNntzPbGbMrHqj9TWK92-DaD61Nw";
+        "https://drive.google.com/uc?export=download&id=1zdcIPUtk5ePqaTK86SFmliThpigJsmHq";
       const link = document.createElement("a");
       link.href = downloadLink;
       link.download = "Nihal_Johann_Thomas_Resume.pdf";
@@ -223,12 +224,16 @@ export const Hero: React.FC = () => {
                   className="relative"
                 >
                   {/* Your Photo */}
-                  <div className="relative w-80 h-80 mx-auto mb-6 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl">
+                  <div
+                    className="relative w-80 h-80 mx-auto mb-6 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl"
+                    style={{ backgroundColor: "#c56c7e" }}
+                  >
                     <img
                       src="/download.png"
                       alt="Nihal Johann Thomas"
                       className="w-full h-full object-cover"
-                      style={{ objectPosition: "top" }}
+                      style={{ objectPosition: "top", backgroundColor: "#c56c7e" }}
+                      
                     />
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 to-transparent" />
