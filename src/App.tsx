@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
@@ -52,6 +53,7 @@ function App() {
             <p>&copy; 2025 Nihal Johann Thomas. All rights reserved.</p>
           </div>
         </footer>
+        <Analytics />
       </div>
     </ErrorBoundary>
   );
